@@ -3,7 +3,8 @@
     "include": [
       "BUTTON",
       "DATE_PICKER",
-      "TIME_PICKER"
+      "TIME_PICKER",
+      "CARD"
     ],
     "customProperties": {
       "animation-duration": "0.3s",
