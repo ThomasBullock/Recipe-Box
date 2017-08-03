@@ -19,7 +19,6 @@ class App extends Component {
 
     this.state = {};
     this.deleteRecipe = this.deleteRecipe.bind(this);
-
   }
 
   componentDidMount() {
@@ -66,12 +65,12 @@ class App extends Component {
           <h2>Mots Curry Collection</h2>
         </div>
         <p className="App-intro">
-          To get started, add a recipe.
+          Curries from around the world...and elsewhere. Consume at own risk.
         </p>
+        <AddRecipe label='Add Recipe' addRecipe={this.props.addRecipe}/>  
         <main>
           {recipeList}  
         </main>     
-        <AddRecipe label='Add Recipe' addRecipe={this.props.addRecipe}/>       
       </div>
     );
   }

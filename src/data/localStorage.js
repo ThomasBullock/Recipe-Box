@@ -5,8 +5,9 @@ import { recipes } from './recipeData';
 export const loadState = () => {
 	try {
 		const serializedState = localStorage.getItem('state');
+		// console.log(serializedState);
 		if(serializedState === null) { // if localStorage is turned off
-			return undefined;
+			return recipes;
 		}
 		// convert serialized data and if empty add our recipes
 		const localData = JSON.parse(serializedState);
