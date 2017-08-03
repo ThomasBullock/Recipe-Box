@@ -1,17 +1,17 @@
-import * as actionTypes from './actionTypes';
+// import * as actionTypes from './actionTypes'; // it appears this is not needed
 import { recipes } from '../data/recipeData'; 
 
-export function getRecipes() {
+// this action has been made redundant as we get recipes from localStorage
+export function getRecipes() {  
 	return function(dispatch) {
 		dispatch({
 			type: 'GET_RECIPES',
-			recipes
+			recipes: recipes.recipes
 		})
 	}
 }
 
 export function addRecipe(recipe) {
-	console.log(recipe)
 	return function(dispatch) {
 		dispatch({
 			type: 'ADD_RECIPE',
@@ -21,7 +21,6 @@ export function addRecipe(recipe) {
 }
 
 export function editRecipe(recipe, index) {
-	console.log(recipe)
 	return function(dispatch) {
 		dispatch({
 			type: 'EDIT_RECIPE',
@@ -32,7 +31,6 @@ export function editRecipe(recipe, index) {
 }
 
 export function deleteRecipe(index) {
-	console.log('action delete')
 	return function(dispatch) {
 		dispatch({
 			type: 'DELETE_RECIPE',

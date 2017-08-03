@@ -8,13 +8,13 @@ import registerServiceWorker from './registerServiceWorker';
 import theme from './assets/react-toolbox/theme'
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import store from './store';
-import * as actionCreators from './actions/actionCreators';
+
 import './assets/react-toolbox/theme.css';
 
 // Load Recipe Items or set default Recipe Items
-const recipes = {};
-
-store.dispatch(actionCreators.getRecipes());
+// removed this getRecipes request as we get recipes from local storage
+// import * as actionCreators from './actions/actionCreators'; 
+// store.dispatch(actionCreators.getRecipes()); 
 
 ReactDOM.render(
 	<Provider store={store}>

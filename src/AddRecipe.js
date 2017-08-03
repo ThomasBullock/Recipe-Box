@@ -20,19 +20,6 @@ class AddRecipe extends Component {
 		this.handleForm = this.handleForm.bind(this);
 	}
 
-	componentDidMount() {
-		// console.log(this.props)
-		// if (this.props.label === 'edit') {
-		// 	console.log('set state!')
-		// 	this.setState({
-		// 		title: this.props.recipe.title,
-		// 		img: this.props.recipe.img,
-		// 		ingredients: this.props.recipe.ingredients.join(', '),
-		// 		index: this.props.recipe.index
-		// 	})
-		// }
-	}
-
 	handleToggle() {
 		if (this.props.label === 'Edit') {
 			this.setState({
@@ -53,10 +40,10 @@ class AddRecipe extends Component {
 
 	handleForm(value, name) {
 		this.setState({...this.state, [name]: value});
-		console.log(name, value)
 	}
 
-	handleSave() {
+	handleSave() { 
+		// need to remove uneeded commas at end of ingredients list
 		if(this.props.label === 'Edit') {
 			this.props.editRecipe({
 				'title' : this.state.title,
@@ -66,7 +53,7 @@ class AddRecipe extends Component {
 		} else {
 			this.props.addRecipe({
 				'title' : this.state.title,
-				'ingredients' : this.state.ingredients.split(',').map( (word) => word.trim() ),
+				'ingredients' : this.state.ingredients.split(',').map( (word) => word.trim() ), 
 				'img' : this.state.img
 			});			
 		}

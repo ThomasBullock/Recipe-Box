@@ -7,17 +7,15 @@ function recipes(state = [], action) {
 		case 'ADD_RECIPE' : 
 			return [
 				...state, action.recipe
-			]
-			state;
+			];
 		case 'EDIT_RECIPE' :
-			console.log('edit the recipe');
+
 			return [
 				...state.slice(0, i),
 				action.recipe,	
 				...state.slice(i + 1)
 			]
 		case 'DELETE_RECIPE' : 
-			console.log('reducer delete');
 			return [
 				...state.slice(0, i),
 				...state.slice(i + 1)
