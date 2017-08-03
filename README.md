@@ -7,7 +7,7 @@ Material Design Components added with [React-Toolbox](http://react-toolbox.com/#
 
 This tutorial by [Dan Abramov](https://egghead.io/lessons/javascript-redux-persisting-the-state-to-the-local-storage) was very helpful in setting up localStorage.
 
-## Project Structure
+### Project Structure
 
 ```
 Recipe-Box/
@@ -28,7 +28,6 @@ Recipe-Box/
       AddRecipe.js
       App.js
       index.js
-    index.html
   
 ```
 
