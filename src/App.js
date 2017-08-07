@@ -65,7 +65,7 @@ class App extends Component {
           <h2>Mots Curry Collection</h2>
         </div>
         <p className="App-intro">
-          Curries from around the world...and elsewhere. Consume at own risk.
+          A Collection of curry recipes. Edit, Delete or Add your own.
         </p>
         <AddRecipe label='Add Recipe' addRecipe={this.props.addRecipe}/>  
         <main>
